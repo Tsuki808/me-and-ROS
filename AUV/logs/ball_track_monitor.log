@@ -1,0 +1,64 @@
+BallTrack monitor: target=blue confidence>=0.35 confirm_frames=3 timeout=0.50s aim=0.50 deadband=0.08
+t=2900.660  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2901.061  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2901.262  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2901.460  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2905.861  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2906.065  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2906.262  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2906.461  raw=[blue_ball 0.79 x=0.883 w=0.129 h=0.360]  count=0  ball_x=-  count=0  trim=+0
+t=2906.660  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2906.864  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2907.063  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2907.263  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2907.461  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2907.663  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2907.862  raw=[blue_ball 0.38 x=0.684 w=0.127 h=0.299]  count=0  ball_x=-  count=0  trim=+0
+t=2908.066  raw=[blue_ball 0.58 x=0.647 w=0.127 h=0.375]  count=0  ball_x=-  count=0  trim=+0
+t=2908.264  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2908.466  raw=[blue_ball 0.43 x=0.554 w=0.124 h=0.372]  count=0  ball_x=-  count=0  trim=+0
+t=2908.663  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2908.863  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2909.063  raw=[blue_ball 0.38 x=0.396 w=0.126 h=0.412]  count=0  ball_x=-  count=0  trim=+0
+t=2909.263  raw=[blue_ball 0.62 x=0.343 w=0.139 h=0.428]  count=0  ball_x=-  count=0  trim=+0
+t=2909.463  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2909.663  raw=[blue_ball 0.84 x=0.189 w=0.158 h=0.447]  count=0  ball_x=-  count=0  trim=+0
+t=2909.863  raw=[blue_ball 0.50 x=0.105 w=0.175 h=0.480]  count=0  ball_x=-  count=0  trim=+0
+t=2910.063  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2910.263  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2910.463  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2910.663  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2910.863  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2911.068  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2911.261  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2911.462  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2911.661  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2911.864  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2912.064  raw=[blue_ball 0.79 x=0.883 w=0.129 h=0.360]  count=0  ball_x=-  count=0  trim=+0
+t=2912.263  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2912.460  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2912.663  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2912.863  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2913.060  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2913.263  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2913.461  raw=[blue_ball 0.38 x=0.684 w=0.127 h=0.299]  count=0  ball_x=-  count=0  trim=+0
+t=2913.662  raw=[blue_ball 0.58 x=0.647 w=0.127 h=0.375]  count=0  ball_x=-  count=0  trim=+0
+t=2913.863  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2914.061  raw=[blue_ball 0.43 x=0.554 w=0.124 h=0.372]  count=0  ball_x=-  count=0  trim=+0
+t=2914.262  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2914.463  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2914.661  raw=[blue_ball 0.38 x=0.396 w=0.126 h=0.412]  count=0  ball_x=-  count=0  trim=+0
+t=2914.861  raw=[blue_ball 0.62 x=0.343 w=0.139 h=0.428]  count=0  ball_x=-  count=0  trim=+0
+t=2915.060  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2915.262  raw=[blue_ball 0.84 x=0.189 w=0.158 h=0.447]  count=0  ball_x=-  count=0  trim=+0
+t=2915.460  raw=[blue_ball 0.50 x=0.105 w=0.175 h=0.480]  count=0  ball_x=-  count=0  trim=+0
+t=2915.661  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2915.863  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2916.063  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2916.261  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2916.462  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2916.668  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2916.864  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2917.060  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2917.265  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2917.462  raw=[none]  count=0  ball_x=-  count=0  trim=+0

@@ -1,0 +1,10 @@
+BallTrack 受控输入（非真实视频；用于验证三帧确认逻辑）
+target=blue_ball conf>=0.35 confirm_frames=3 timeout=0.50s
+  frame 1: count=1  ball_x=None
+  frame 2: count=2  ball_x=None
+  frame 3: count=3  ball_x=0.7
+  accepted ball_x=0.700 -> vision error=+0.200 -> trim=+100
+  16:9真实框 frame 1: count=0  ball_x=None (w/h=0.358)
+  16:9真实框 frame 2: count=0  ball_x=None (w/h=0.358)
+  16:9真实框 frame 3: count=0  ball_x=None (w/h=0.358)
+结论: 门控逻辑正常；真实框的归一化 w/h=0.36 < 0.5 被拒绝。

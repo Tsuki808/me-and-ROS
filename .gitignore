@@ -1,0 +1,60 @@
+# ==============================================================
+#  me-and-ROS  .gitignore
+#  安全边界：AUV 为在研比赛项目，其源代码永不入库
+# ==============================================================
+
+# ---------- AUV 源代码 / 工程目录（严格禁止） ----------
+AUV/Jetson_core_code/
+AUV/tools/
+AUV/ros_home/
+AUV/Jetson_media/
+AUV/**/*.py
+AUV/**/*.pyw
+AUV/**/*.cpp
+AUV/**/*.cc
+AUV/**/*.cxx
+AUV/**/*.h
+AUV/**/*.hpp
+AUV/**/*.sh
+AUV/**/*.bash
+AUV/**/*.launch
+AUV/**/*.urdf
+AUV/**/*.xacro
+AUV/**/*.srdf
+AUV/**/CMakeLists.txt
+AUV/**/package.xml
+AUV/**/setup.py
+AUV/**/Makefile
+
+# ---------- catkin 工作区构建与历史快照 ----------
+ROS/build/
+ROS/devel/
+ROS/install/
+ROS/logs/
+ROS/backups/
+ROS/.catkin_workspace
+ROS/src/CMakeLists.txt
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+.venv/
+.venv-*/
+venv/
+*.egg-info/
+
+# ---------- 大体积原始录像 / 数据包（GitHub 单文件上限 100 MB） ----------
+*.bag
+*.avi
+*.mkv
+*.mov
+
+# ---------- 系统与编辑器 ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+~$*
+*.tmp
+*.swp

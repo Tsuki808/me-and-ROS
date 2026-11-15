@@ -1,0 +1,16 @@
+AUV 远程实验环境核验（只读）
+==================================================
+Linux grobot-desktop 5.10.216-tegra #1 SMP PREEMPT Tue Mar 4 01:35:16 PST 2025 aarch64 aarch64 aarch64 GNU/Linux
+NAME="Ubuntu"
+VERSION="20.04.6 LTS (Focal Fossa)"
+ID=ubuntu
+ROS_DISTRO=noetic  install=/opt/ros/noetic
+DISPLAY=:1  TigerVNC 1920x1080
+g_robot     1588       1  4 16:00 ?        00:02:25 /usr/bin/Xtigervnc :1 -desktop grobot-desktop:1 (g_robot) -auth /home/g_robot/.Xauthority -geometry 1920x1080 -depth 24 -rfbwait 30000 -rfbauth /home/g_robot/.vnc/passwd -rfbport 5901 -pn -SecurityTypes VncAuth,TLSVnc
+--------------------------------------------------
+auv-final.service: active=inactive enabled=disabled
+本轮未启动 final.launch；未连接 Pixhawk；未驱动推进器
+--------------------------------------------------
+OpenCV 4.12.0 matplotlib 3.7.5
+GStreamer: ximagesrc/x264enc/mp4mux = yes
+串口设备: （未打开）

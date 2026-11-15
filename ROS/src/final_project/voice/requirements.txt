@@ -1,0 +1,3 @@
+# Optional; install only in an isolated Python 3.7+ environment when enabling voice.
+# API reviewed against iFLYTEK-OP/websdk-python/master on 2026-10-16.
+xfyunsdkspeech

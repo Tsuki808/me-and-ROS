@@ -1,0 +1,8 @@
+<launch>
+  <param name="robot_description_semantic" textfile="$(find final_project)/config/robot.srdf"/>
+  <rosparam file="$(find final_project)/config/moveit.yaml"/>
+  <node pkg="moveit_ros_move_group" type="move_group" name="move_group" output="screen">
+    <remap from="joint_states" to="/final_project/joint_states"/>
+    <param name="allow_trajectory_execution" value="true"/>
+  </node>
+</launch>

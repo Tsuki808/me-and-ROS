@@ -1,0 +1,23 @@
+<launch>
+  <include file="$(find final_project)/launch/navigation.launch">
+    <arg name="slam" value="true"/>
+    <arg name="slam_scan_topic" value="/final_project/mode2/slam_scan"/>
+    <arg name="simple_goal_topic" value="/final_project/mode2/unused_simple_goal"/>
+  </include>
+  <!-- Frontier goals are known-free, so plans must not cross unknown cells. -->
+  <param name="/move_base/NavfnROS/allow_unknown" value="false"/>
+  <param name="/move_base/make_plan_clear_costmap" value="false"/>
+  <!-- Avoid reverse arcs rejected by the unchanged rear laser stop guard. -->
+  <param name="/move_base/DWAPlannerROS/min_vel_x" value="0.0"/>
+  <!-- Valid but oscillating DWA commands must trigger collision-checked recovery. -->
+  <param name="/move_base/oscillation_timeout" value="15.0"/>
+  <param name="/move_base/oscillation_distance" value="0.10"/>
+  <param name="/move_base/clearing_rotation_allowed" value="true"/>
+  <!-- Give the larger footprint a cost gradient before walls, on SLAM-sized cells. -->
+  <param name="/move_base/global_costmap/inflation/inflation_radius" value="0.50"/>
+  <param name="/move_base/local_costmap/inflation/inflation_radius" value="0.50"/>
+  <param name="/move_base/local_costmap/resolution" value="0.025"/>
+  <!-- Match the explorer's 0.35 m circle, including grid/noise clearance. -->
+  <rosparam param="/move_base/global_costmap/footprint">[[0.35,0.06962],[0.296716,0.198259],[0.198259,0.296716],[0.06962,0.35],[-0.06962,0.35],[-0.198259,0.296716],[-0.296716,0.198259],[-0.35,0.06962],[-0.35,-0.06962],[-0.296716,-0.198259],[-0.198259,-0.296716],[-0.06962,-0.35],[0.06962,-0.35],[0.198259,-0.296716],[0.296716,-0.198259],[0.35,-0.06962]]</rosparam>
+  <rosparam param="/move_base/local_costmap/footprint">[[0.35,0.06962],[0.296716,0.198259],[0.198259,0.296716],[0.06962,0.35],[-0.06962,0.35],[-0.198259,0.296716],[-0.296716,0.198259],[-0.35,0.06962],[-0.35,-0.06962],[-0.296716,-0.198259],[-0.198259,-0.296716],[-0.06962,-0.35],[0.06962,-0.35],[0.198259,-0.296716],[0.296716,-0.198259],[0.35,-0.06962]]</rosparam>
+</launch>

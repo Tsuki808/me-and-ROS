@@ -1,0 +1,10 @@
+string object_id
+string source
+string destination
+---
+bool success
+string message
+float64 elapsed_seconds
+---
+string stage
+string detail

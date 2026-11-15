@@ -1,0 +1,5 @@
+string model_name
+bool attach
+---
+bool success
+string message

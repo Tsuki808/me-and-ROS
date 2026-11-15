@@ -1,0 +1,26 @@
+om_with_tb3:
+  gazebo_ros_control:
+    pid_gains:
+      joint1: {p: 100000.0, i: 1000.0, d: 100.0, i_clamp: 0.2}
+      joint2: {p: 100000.0, i: 1000.0, d: 500.0, i_clamp: 0.2}
+      joint3: {p: 100000.0, i: 1000.0, d: 500.0, i_clamp: 0.2}
+      joint4: {p: 100000.0, i: 1000.0, d: 500.0, i_clamp: 0.2}
+      gripper: {p: 100000.0, i: 1000.0, d: 500.0, i_clamp: 0.2}
+      gripper_sub: {p: 100000.0, i: 250.0, d: 1000.0, i_clamp: 0.2}
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 30
+  arm_controller:
+    type: position_controllers/JointTrajectoryController
+    joints: [joint1, joint2, joint3, joint4]
+    constraints:
+      goal_time: 2.0
+      stopped_velocity_tolerance: 0.2
+      joint1: {trajectory: 0.2, goal: 0.03}
+      joint2: {trajectory: 0.2, goal: 0.03}
+      joint3: {trajectory: 0.2, goal: 0.03}
+      joint4: {trajectory: 0.2, goal: 0.03}
+  gripper_controller:
+    type: position_controllers/JointTrajectoryController
+    joints: [gripper, gripper_sub]
+    constraints: {goal_time: 2.0, stopped_velocity_tolerance: 0.2}

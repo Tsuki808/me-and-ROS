@@ -1,0 +1,3 @@
+<launch>
+  <node pkg="final_project" type="final_project_auto_explore" name="automatic_explore" output="screen"/>
+</launch>

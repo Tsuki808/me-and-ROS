@@ -1,0 +1,60 @@
+material Delivery/Marker0
+{
+  technique
+  {
+    pass
+    {
+      lighting off
+      texture_unit
+      {
+        texture Marker0.png
+        filtering none
+      }
+    }
+  }
+}
+material Delivery/Marker9
+{
+  technique
+  {
+    pass
+    {
+      lighting off
+      texture_unit
+      {
+        texture Marker9.png
+        filtering none
+      }
+    }
+  }
+}
+material Delivery/Marker10
+{
+  technique
+  {
+    pass
+    {
+      lighting off
+      texture_unit
+      {
+        texture Marker10.png
+        filtering none
+      }
+    }
+  }
+}
+material Delivery/Marker11
+{
+  technique
+  {
+    pass
+    {
+      lighting off
+      texture_unit
+      {
+        texture Marker11.png
+        filtering none
+      }
+    }
+  }
+}

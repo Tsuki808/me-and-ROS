@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <node pkg="turtlesim" type="turtlesim_node" name="task3_turtlesim" output="screen" required="true" />
+  <node pkg="task3" type="spawn_turtle.py" name="spawn_turtle" output="screen" />
+  <node pkg="task3" type="turtle_tf_broadcaster.py" name="turtle1_tf" output="screen">
+    <param name="turtle_name" value="turtle1" />
+  </node>
+  <node pkg="task3" type="turtle_tf_broadcaster.py" name="turtle2_tf" output="screen">
+    <param name="turtle_name" value="turtle2" />
+  </node>
+  <node pkg="task3" type="turtle_follower.py" name="turtle_follower" output="screen" required="true">
+    <rosparam command="load" file="$(find task3)/config/pid.yaml" />
+  </node>
+</launch>

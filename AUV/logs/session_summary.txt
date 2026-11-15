@@ -1,0 +1,61 @@
+会话 981ac8a2
+  样本数: 1918  时长: 99.2 s
+  深度范围: -0.001 .. 0.838 m
+  ball_x 有效样本: 0
+  墙距有效样本: front=0 rear=0 left=0
+  状态转换:
+    t=   0.00  -> WAIT         shore initialization
+    t=  30.10  -> ARMING       submerged continuously
+    t=  31.68  -> RISE         ALT_HOLD and armed confirmed
+    t=  34.70  -> FORWARD      initial rise ended
+    t=  64.70  -> BACK         front proximity or forward time; impact unconfirmed
+    t=  94.75  -> LEFT         reverse time limit; rear contact unconfirmed
+  指令变化（前 20 条）:
+    t=   0.00  x=   0 y=   0 z= 500 r=   0
+    t=  31.68  x=   0 y=   0 z= 610 r=   0
+    t=  34.70  x= 525 y=   0 z= 500 r=   0
+    t=  39.74  x= 525 y=   0 z= 610 r=   0
+    t=  54.06  x= 525 y=   0 z= 500 r=   0
+    t=  64.70  x=   0 y=   0 z= 500 r=   0
+    t=  64.76  x=-500 y=   0 z= 500 r=   0
+    t=  65.55  x=-500 y=   0 z= 610 r=   0
+    t=  66.08  x=-500 y=   0 z= 500 r=   0
+    t=  73.34  x=-500 y=   0 z= 610 r=   0
+    t=  75.60  x=-500 y=   0 z= 500 r=   0
+    t=  94.75  x=   0 y=   0 z= 500 r=   0
+    t=  94.80  x=   0 y=-300 z= 500 r=   0
+  最终状态: LEFT (reverse time limit; rear contact unconfirmed)
+
+会话 31be0b02
+  样本数: 1082  时长: 57.4 s
+  深度范围: 0.000 .. 0.862 m
+  ball_x 有效样本: 0
+  墙距有效样本: front=0 rear=0 left=0
+  状态转换:
+    t=   0.00  -> WAIT         shore initialization
+    t=  16.91  -> ARMING       submerged continuously
+    t=  17.30  -> RISE         ALT_HOLD and armed confirmed
+    t=  20.30  -> FORWARD      initial rise ended
+    t=  47.32  -> ABORTED      heading correction timeout
+  指令变化（前 20 条）:
+    t=   0.00  x=   0 y=   0 z= 500 r=   0
+    t=  17.30  x=   0 y=   0 z= 610 r=-158
+    t=  17.35  x=   0 y=   0 z= 610 r=-152
+    t=  17.47  x=   0 y=   0 z= 610 r=-146
+    t=  17.58  x=   0 y=   0 z= 610 r=-142
+    t=  17.79  x=   0 y=   0 z= 610 r=-138
+    t=  17.84  x=   0 y=   0 z= 610 r=-132
+    t=  17.95  x=   0 y=   0 z= 610 r=-130
+    t=  18.12  x=   0 y=   0 z= 610 r=-127
+    t=  18.27  x=   0 y=   0 z= 610 r=-125
+    t=  18.33  x=   0 y=   0 z= 610 r=-123
+    t=  18.38  x=   0 y=   0 z= 610 r=-121
+    t=  18.54  x=   0 y=   0 z= 610 r=-118
+    t=  18.59  x=   0 y=   0 z= 610 r=-116
+    t=  18.75  x=   0 y=   0 z= 610 r=-113
+    t=  18.87  x=   0 y=   0 z= 610 r=-109
+    t=  18.97  x=   0 y=   0 z= 610 r=-108
+    t=  19.13  x=   0 y=   0 z= 610 r=-107
+    t=  19.77  x=   0 y=   0 z= 610 r=-108
+    t=  19.93  x=   0 y=   0 z= 610 r=-109
+  最终状态: ABORTED (heading correction timeout)

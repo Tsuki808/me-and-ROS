@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="final_project" type="automatic_delivery.py" name="mission_server" output="screen">
+    <remap from="joint_states" to="/final_project/joint_states"/>
+  </node>
+</launch>

@@ -1,0 +1,40 @@
+AUV 工作区结构与关键文件（只读）
+==================================================
+catkin_ws/src 中的 AUV 包:
+  src/auv_boot_sequence
+  src/auv_bringup
+  src/auv_camera
+  src/auv_control
+  src/auv_final_competition
+  src/auv_lidar_perception
+  src/auv_mission
+  src/auv_msgs
+  src/auv_sonar
+  src/auv_stereo
+  src/auv_tag_navigation
+  src/auv_vision
+  src/auv_visualization
+  src/auv_water_entry
+  src/benewake_lds_ros
+  src/stereo_cam_ros
+  src/your_pkg
+--------------------------------------------------
+auv_final_competition 关键文件（行数）:
+266 src/auv_final_competition/python/auv_final_competition/policy.py
+93 src/auv_final_competition/python/auv_final_competition/perception.py
+224 src/auv_final_competition/scripts/final_mission.py
+19 src/auv_final_competition/scripts/final_detector.py
+236 src/auv_final_competition/test/test_final.py
+32 src/auv_final_competition/launch/final.launch
+85 src/auv_final_competition/config/competition.yaml
+--------------------------------------------------
+auv_lidar_perception 墙检测:
+  345 src/auv_lidar_perception/src/wall_detector.cpp
+  175 src/auv_lidar_perception/src/wall_detector_node.cpp
+   62 src/auv_lidar_perception/include/wall_detector.h
+  582 总用量
+--------------------------------------------------
+感知/控制/任务包:
+  auv_vision: 17 files
+  auv_control: 41 files
+  auv_mission: 28 files

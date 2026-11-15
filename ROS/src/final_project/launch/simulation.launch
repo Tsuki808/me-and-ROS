@@ -1,0 +1,93 @@
+<launch>
+  <arg name="mode" default="2" doc="1: keyboard; 2: automatic mapping and A-to-B delivery; 3: voice driving and grasp/place"/>
+  <arg name="target_color" default="red" doc="Mode 2: red, green, blue or yellow"/>
+  <arg name="mode2_variant" default="auto_delivery" doc="Mode 2 variant: auto_delivery or semantic_pick"/>
+  <arg name="map_file" default="$(find final_project)/maps/delivery.yaml"/>
+  <arg name="yolo_view" default="true" doc="Mode 2 only: continuous YOLO observation window; no mission control"/>
+  <arg name="voice_audio" default="true" doc="Mode 3 only: false is text validation, not real speech"/>
+  <arg name="voice_device" default="pulse"/>
+  <arg name="gui" default="true"/>
+  <arg name="rviz" default="true"/>
+  <env name="LIBGL_ALWAYS_SOFTWARE" value="1"/>
+  <env name="GAZEBO_MODEL_PATH" value="$(find final_project)/models:$(optenv GAZEBO_MODEL_PATH)"/>
+  <env name="GAZEBO_PLUGIN_PATH" value="$(find final_project)/../../devel/lib:$(optenv GAZEBO_PLUGIN_PATH)"/>
+  <param name="use_sim_time" value="true"/>
+  <param if="$(eval int(arg('mode')) == 2)" name="robot_description" command="$(find final_project)/tools/render_robot.py --cleanup-ros"/>
+  <param unless="$(eval int(arg('mode')) == 2)" name="robot_description" command="$(find final_project)/tools/render_robot.py"/>
+  <rosparam file="$(find final_project)/config/controllers.yaml"/>
+  <rosparam file="$(find final_project)/config/mission.yaml" ns="final_project"/>
+  <param name="/final_project/operation_mode" type="int" value="$(arg mode)"/>
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find final_project)/worlds/delivery.world"/>
+    <arg name="gui" value="$(arg gui)"/>
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+  </include>
+  <node if="$(eval int(arg('mode')) == 2 and arg('mode2_variant') == 'semantic_pick')" pkg="gazebo_ros" type="spawn_model" name="spawn_delivery_robot_semantic" args="-urdf -param robot_description -model om_with_tb3 -x -1.2 -y 0.30 -Y 1.57079632679 -J joint2 -0.25 -J joint3 -0.02 -J joint4 0.27 -J gripper 0.019 -J gripper_sub 0.019" output="screen"/>
+  <node unless="$(eval int(arg('mode')) == 2 and arg('mode2_variant') == 'semantic_pick')" pkg="gazebo_ros" type="spawn_model" name="spawn_delivery_robot" args="-urdf -param robot_description -model om_with_tb3 -x 0 -y -1.2 -Y 1.57079632679 -J joint2 -0.25 -J joint3 -0.02 -J joint4 0.27 -J gripper 0.019 -J gripper_sub 0.019" output="screen"/>
+  <node pkg="controller_manager" type="spawner" name="controller_spawner" ns="om_with_tb3" args="joint_state_controller arm_controller gripper_controller" output="screen"/>
+  <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_merger">
+    <param name="use_gui" value="false"/>
+    <param name="rate" value="30"/>
+    <rosparam param="source_list">[/joint_states, /om_with_tb3/joint_states]</rosparam>
+    <remap from="joint_states" to="/final_project/joint_states"/>
+  </node>
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+    <remap from="joint_states" to="/final_project/joint_states"/>
+  </node>
+  <include if="$(eval int(arg('mode')) != 2)" file="$(find final_project)/launch/navigation.launch">
+    <arg name="map_file" value="$(arg map_file)"/>
+    <arg name="initial_x" value="0.0"/>
+    <arg name="initial_y" value="-1.2"/>
+    <arg name="initial_yaw" value="1.57079632679"/>
+  </include>
+  <include if="$(eval int(arg('mode')) == 2 and arg('mode2_variant') == 'semantic_pick')" file="$(find final_project)/launch/mode2_localization.launch">
+    <arg name="map_file" value="$(arg map_file)"/>
+    <arg name="initial_x" value="-1.2"/>
+    <arg name="initial_y" value="0.30"/>
+    <arg name="initial_yaw" value="1.57079632679"/>
+  </include>
+  <include file="$(find final_project)/launch/manipulation.launch"/>
+  <node pkg="ar_track_alvar" type="individualMarkersNoKinect" name="marker_detector" output="screen">
+    <!-- Texture is 360 px wide, its black marker spans 340 px on a 50 mm plane. -->
+    <param name="marker_size" value="4.722222222"/>
+    <param name="max_new_marker_error" value="$(eval 0.12 if int(arg('mode')) == 2 else 0.08)"/>
+    <param name="max_track_error" value="0.2"/>
+    <param name="output_frame" value="base_footprint"/>
+    <remap from="camera_image" to="/inspection/image_raw"/>
+    <remap from="camera_info" to="/inspection/camera_info"/>
+  </node>
+  <node pkg="final_project" type="velocity_gate.py" name="velocity_gate" output="screen"/>
+  <node if="$(eval int(arg('mode')) != 2)" pkg="final_project" type="mission_server.py" name="mission_server" output="screen">
+    <remap from="joint_states" to="/final_project/joint_states"/>
+  </node>
+  <node if="$(eval int(arg('mode')) == 2 and arg('mode2_variant') != 'semantic_pick')" pkg="final_project" type="slam_navigation.py" name="slam_navigation" output="screen">
+    <remap from="joint_states" to="/final_project/joint_states"/>
+  </node>
+  <group if="$(eval int(arg('mode')) == 2)">
+    <rosparam file="$(find final_project)/config/automatic.yaml" ns="final_project/automatic"/>
+    <rosparam file="$(find final_project)/config/colored_boxes.yaml" ns="final_project"/>
+    <param name="/final_project/target_color" value="$(arg target_color)"/>
+    <param name="/final_project/vision_python" value="$(find final_project)/../../.venv-vision/bin/python"/>
+    <param name="/final_project/vision_worker" value="$(find final_project)/vision/detect_boxes.py"/>
+    <param name="/final_project/vision_model" value="$(find final_project)/vision/yoloe-26n-seg.onnx"/>
+    <group if="$(arg yolo_view)">
+      <node pkg="final_project" type="yolo_preview.py" name="yolo_preview" output="screen"/>
+      <node pkg="image_view" type="image_view" name="yolo_detection_view" output="screen">
+        <remap from="image" to="/final_project/vision/image_annotated"/>
+        <param name="window_name" value="YOLO - Color Box Detection"/>
+        <param name="autosize" value="false"/>
+      </node>
+    </group>
+    <node if="$(eval arg('mode2_variant') == 'semantic_pick')" pkg="final_project" type="semantic_mission.py" name="semantic_mission" output="screen"/>
+    <include if="$(eval arg('mode2_variant') == 'semantic_pick')" file="$(find rosbridge_server)/launch/rosbridge_websocket.launch"/>
+  </group>
+  <node if="$(eval int(arg('mode')) == 3)" pkg="final_project" type="voice_control.py" name="voice_control" output="screen">
+    <param name="audio" value="$(arg voice_audio)"/>
+    <param name="device" value="$(arg voice_device)"/>
+    <param name="speech_script" value="$(find final_project)/voice/xfyun_input.py"/>
+    <param name="speech_python" value="$(find final_project)/../../.venv-voice/bin/python"/>
+  </node>
+  <arg name="rviz_config" default="$(eval 'automatic.rviz' if int(arg('mode')) == 2 else 'delivery.rviz')"/>
+  <node if="$(arg rviz)" pkg="rviz" type="rviz" name="delivery_rviz" args="-d $(find final_project)/config/$(arg rviz_config)"/>
+</launch>

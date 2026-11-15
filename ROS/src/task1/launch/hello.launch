@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <node pkg="task1" type="hello.py" name="hello_ros" output="screen" />
+</launch>

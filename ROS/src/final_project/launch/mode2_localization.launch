@@ -1,0 +1,19 @@
+<launch>
+  <arg name="map_file"/>
+  <arg name="initial_x"/>
+  <arg name="initial_y"/>
+  <arg name="initial_yaw"/>
+  <include file="$(find final_project)/launch/navigation.launch">
+    <arg name="slam" value="false"/>
+    <arg name="map_file" value="$(arg map_file)"/>
+    <arg name="initial_x" value="$(arg initial_x)"/>
+    <arg name="initial_y" value="$(arg initial_y)"/>
+    <arg name="initial_yaw" value="$(arg initial_yaw)"/>
+    <arg name="simple_goal_topic" value="/final_project/mode2/unused_simple_goal"/>
+  </include>
+  <rosparam file="$(find final_project)/config/automatic_navigation.yaml" ns="move_base"/>
+  <!-- Keep mapping's bounded, collision-checked oscillation recovery. -->
+  <param name="/move_base/oscillation_timeout" value="15.0"/>
+  <param name="/move_base/oscillation_distance" value="0.10"/>
+  <param name="/move_base/clearing_rotation_allowed" value="true"/>
+</launch>

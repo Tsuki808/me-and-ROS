@@ -1,0 +1,23 @@
+object_id: box1
+# Upstream Marker0.png is decoded as ALVAR ID 8 by Melodic.
+marker_id: 8
+box_size: 0.05
+# Finger collision geometry extends 31 mm below the horizontal tool frame.
+grasp_height_offset: 0.012
+table_height: 0.18
+robot_name: om_with_tb3
+base_frame: base_footprint
+tool_frame: end_effector_link
+marker_max_age: 0.7
+home: [0.0, -1.2, 1.57079632679]
+stations:
+  A:
+    table: [-1.2, 1.0, 0.09]
+    object: [-1.2, 0.90, 0.205]
+  B:
+    table: [1.2, 1.0, 0.09]
+    object: [1.2, 0.90, 0.205]
+docking:
+  distance: 0.275
+  position_tolerance: 0.008
+  heading_tolerance: 0.025

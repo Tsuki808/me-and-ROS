@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <group ns="task2">
+    <rosparam command="load" file="$(find task2)/config/student.yaml" />
+    <node pkg="task2" type="student_publisher.py" name="student_publisher" output="screen" />
+    <node pkg="task2" type="student_subscriber.py" name="student_subscriber" output="screen" />
+    <node pkg="task2" type="query_student_server.py" name="query_student_server" output="screen" />
+  </group>
+</launch>

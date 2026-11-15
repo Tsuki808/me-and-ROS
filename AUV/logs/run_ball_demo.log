@@ -1,0 +1,18 @@
+ball demo started: roscore=11322 pids=33751 33847 33848 33849
+capture exit=0
+--- monitor tail ---
+t=2915.262  raw=[blue_ball 0.84 x=0.189 w=0.158 h=0.447]  count=0  ball_x=-  count=0  trim=+0
+t=2915.460  raw=[blue_ball 0.50 x=0.105 w=0.175 h=0.480]  count=0  ball_x=-  count=0  trim=+0
+t=2915.661  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2915.863  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2916.063  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2916.261  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2916.462  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2916.668  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2916.864  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2917.060  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2917.265  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+t=2917.462  raw=[none]  count=0  ball_x=-  count=0  trim=+0
+--- detector tail ---
+/home/g_robot/.local/lib/python3.8/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/home/g_robot/.local/lib/python3.8/site-packages/torchvision/image.so: undefined symbol: _ZN5torch3jit17parseSchemaOrNameERKSs'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
+  warn(

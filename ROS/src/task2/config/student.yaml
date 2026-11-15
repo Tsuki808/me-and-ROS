@@ -1,0 +1,5 @@
+student:
+  name: "示例学生"
+  gender: "未指定"
+  age: 20
+  student_id: "00000001"

@@ -1,0 +1,90 @@
+# 演示副本：原始文件 /home/g_robot/Desktop/比赛参数.yaml 未修改
+# 唯一差异：min_depth_m 0.40 -> 0.20，使 start_depth_m=0.30 通过 Mission.validate()
+# 本副本已脱敏：camera_url 中的现场摄像头地址与账号替换为占位符
+# 原因记录见 show_xjy/AUV核心算法与实验展示总结.md
+# 比赛参数：普通文本编辑。保存后重启入口才加载；禁止比赛中热改。
+# null 表示未填写，不是0。必填球深度未填时仅记录，不解锁。
+enable_control: true
+ball_depth_m: 0.30                 # 必填：目标球撞击位置距水面，米
+strike_above_pressure_m: 0.20      # 用户确认：撞击部位比压力传感器高20cm
+target_color: red                  # 抽签后填 red 或 blue；只跟这一颜色
+left_distance_m: 0.55              # 可选：雷达原点至左墙期望垂距；空则不做左墙纠偏
+laser_yaw_deg: 180.0               # 用户确认反向安装：绕竖直轴180°，只在墙距算法补偿一次
+laser_frame: laser_frame
+camera_url: 'rtsp://<CAMERA_IP>/user=<USER>&password=<PASS>&channel=1&stream=0.sdp?real_stream'  # 已脱敏：原值为现场摄像头地址与账号
+record_root: ~/Desktop/catkin_ws/recordings/final
+pressure_frame: water_pressure_2
+water_density: 1000.0
+shore_zero_s: 2.0                  # 岸上同一外压传感器稳定采样；入水后不再归零
+shore_zero_spread_pa: 150.0
+surface_reference_tolerance_pa: 200.0
+allow_shore_zero_fallback: true    # 当前飞控零点读不到/不匹配时采用已确认的岸上基准
+start_depth_m: 0.30
+start_hold_s: 3.0
+heading_capture_depth_m: 0.15      # 初入水锁定方向，后续不随着漂移重设
+rise_z: 610
+rise_s: 3.0
+neutral_z: 500
+forward_x: 550
+initial_forward_s: 5.0
+forward_total_s: 30.0              # 含最初5秒，也含暂停纠偏时间
+reverse_x: -500
+reverse_s: 30.0
+left_y: -300                      # 延用现有A键负号；按机器人自身左右现场核对
+left_s: 10.0
+# 以下为工程初值，距离均从雷达旋转中心量，不是机壳边缘距离。
+front_stop_m: 0.65
+rear_near_m: 0.80
+left_near_m: 0.55
+approach_band_m: 0.35
+reverse_slow_x: -150
+left_slow_y: -120
+touch_s: 0.8                       # 已看到近墙后的有限轻靠；不是接触成功证据
+min_depth_m: 0.20                  # 必须按机体最高点留够完全浸没空间
+max_depth_m: 1.15                  # 按实际池深/机体底部净空调
+depth_tolerance_m: 0.04
+depth_up_z: 610
+depth_down_z: 390
+depth_guard_timeout_s: 10.0
+feedback_timeout_s: 0.75
+attitude_timeout_s: 0.30
+max_tilt_deg: 20.0
+heading_trigger_deg: 10.0
+heading_stop_error_deg: -1.0
+heading_kp: 12.0                   # Depth Hold偏航速率输入，非旧MANUAL等效力度
+heading_min_r: 175
+heading_max_r: 275
+heading_timeout_s: 30.0
+heading_settle_s: 0.30             # r回0后给飞控减速/锁向，再恢复平移
+wall_ignore_near_m: 0.50
+wall_max_range_m: 5.0
+wall_min_points: 24
+wall_min_length_m: 1.20
+wall_fit_error_m: 0.04
+wall_direction_deg: 15.0
+wall_confirm_frames: 3
+wall_timeout_s: 0.50
+wall_trigger_m: 0.25
+wall_release_m: 0.10
+wall_trim_y: 150
+trim_pulse_s: 0.25
+trim_rest_s: 0.40
+wall_trim_budget_s: 3.0            # 整个前进阶段总侧移时长上限
+vision_enabled: true
+vision_confidence: 0.70
+vision_confirm_frames: 3
+vision_timeout_s: 0.50
+vision_aim_x: 0.50                 # 撞击部位在画面中的水平位置；不使用单目估距离
+vision_deadband: 0.08              # 图像宽度比例
+vision_trim_y: 100
+vision_trim_budget_s: 2.0
+camera_record_fps: 10.0
+detector_device: '0'
+
+# 返航后回收：只有近水面且新鲜压力连续稳定，才回中、加锁并结束本套launch。
+surface_z: 610
+surface_max_depth_m: 0.10         # 压力传感器相对岸上基准；按实际浮出姿态可调整
+surface_stable_s: 3.0
+surface_spread_pa: 100.0          # 稳定窗口最大压差，约1cm水柱；不是要求读数完全相等
+surface_timeout_s: 30.0           # 超时停止上浮并报错，不冒充已出水
+finish_disarm_timeout_s: 8.0      # 等待回中服务和新鲜飞控加锁确认

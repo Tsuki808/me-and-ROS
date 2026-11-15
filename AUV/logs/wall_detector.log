@@ -1,0 +1,158 @@
+[0m[INFO] [2580.899803968]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=134.2 deg, distance=1.16 m, length=1.36 m, points=47, rms=0.011 m[0m
+[0m[INFO] [2581.892789760]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2582.235516896]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=-58.3 deg, distance=2.58 m, length=1.16 m, points=33, rms=0.013 m[0m
+[0m[INFO] [2583.243137824]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=-149.2 deg, distance=0.46 m, length=0.93 m, points=30, rms=0.008 m[0m
+[0m[INFO] [2583.571850144]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2584.407107968]: [wall_detector_node] Detected 3 wall(s). Strongest: direction=142.2 deg, distance=1.04 m, length=1.92 m, points=34, rms=0.007 m[0m
+[0m[INFO] [2585.563537056]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2585.738543776]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=-49.2 deg, distance=2.68 m, length=1.16 m, points=35, rms=0.011 m[0m
+[0m[INFO] [2586.906830112]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=150.5 deg, distance=1.02 m, length=2.53 m, points=46, rms=0.009 m[0m
+[0m[INFO] [2587.540512192]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2588.041716544]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=-43.1 deg, distance=2.69 m, length=1.44 m, points=38, rms=0.014 m[0m
+[0m[INFO] [2589.046635488]: [wall_detector_node] Detected 1 wall(s). Strongest: direction=-41.2 deg, distance=2.68 m, length=0.88 m, points=23, rms=0.014 m[0m
+[0m[INFO] [2589.367432448]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2590.365085632]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=166.6 deg, distance=0.96 m, length=2.08 m, points=28, rms=0.006 m[0m
+[0m[INFO] [2590.537072256]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2591.380728992]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=-103.5 deg, distance=0.37 m, length=1.45 m, points=23, rms=0.008 m[0m
+[0m[INFO] [2591.878111936]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2592.537064288]: [wall_detector_node] Detected 1 wall(s). Strongest: direction=-99.9 deg, distance=0.36 m, length=1.99 m, points=44, rms=0.006 m[0m
+[0m[INFO] [2593.539554464]: [wall_detector_node] Detected 1 wall(s). Strongest: direction=-57.2 deg, distance=2.60 m, length=0.87 m, points=27, rms=0.012 m[0m
+[0m[INFO] [2593.869548384]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2594.887050720]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=-65.9 deg, distance=2.37 m, length=1.40 m, points=26, rms=0.012 m[0m
+[0m[INFO] [2595.547469088]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2596.047819840]: [wall_detector_node] Detected 3 wall(s). Strongest: direction=-148.7 deg, distance=0.46 m, length=1.32 m, points=50, rms=0.007 m[0m
+[0m[INFO] [2597.049717984]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=-52.1 deg, distance=2.67 m, length=1.18 m, points=35, rms=0.013 m[0m
+[0m[INFO] [2597.539463264]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2598.191901824]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=-143.6 deg, distance=0.45 m, length=1.18 m, points=63, rms=0.008 m[0m
+[0m[INFO] [2599.342149120]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=153.1 deg, distance=1.00 m, length=2.00 m, points=31, rms=0.006 m[0m
+[0m[INFO] [2599.517330272]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2600.684537120]: [wall_detector_node] Detected 1 wall(s). Strongest: direction=-115.7 deg, distance=0.41 m, length=1.80 m, points=26, rms=0.012 m[0m
+[0m[INFO] [2601.343388384]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2601.848671136]: [wall_detector_node] Detected 1 wall(s). Strongest: direction=-110.1 deg, distance=0.38 m, length=1.29 m, points=28, rms=0.009 m[0m
+[0m[INFO] [2602.513788384]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2603.356176736]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=-103.5 deg, distance=0.37 m, length=1.45 m, points=23, rms=0.008 m[0m
+[0m[INFO] [2603.854059264]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2604.514827168]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=-70.6 deg, distance=2.30 m, length=1.82 m, points=32, rms=0.015 m[0m
+[0m[INFO] [2605.516433408]: [wall_detector_node] Detected 1 wall(s). Strongest: direction=-57.2 deg, distance=2.60 m, length=0.87 m, points=27, rms=0.012 m[0m
+[0m[INFO] [2605.845851584]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2606.863141824]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=-65.9 deg, distance=2.37 m, length=1.40 m, points=26, rms=0.012 m[0m
+[0m[INFO] [2607.523890336]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2608.023906560]: [wall_detector_node] Detected 3 wall(s). Strongest: direction=-148.7 deg, distance=0.46 m, length=1.32 m, points=50, rms=0.007 m[0m
+[0m[INFO] [2609.027432608]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=-52.1 deg, distance=2.67 m, length=1.18 m, points=35, rms=0.013 m[0m
+[0m[INFO] [2609.516500128]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2610.168564064]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=-143.6 deg, distance=0.45 m, length=1.18 m, points=63, rms=0.008 m[0m
+[0m[INFO] [2611.319285248]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=153.1 deg, distance=1.00 m, length=2.00 m, points=31, rms=0.006 m[0m
+[0m[INFO] [2611.493374400]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2612.662039456]: [wall_detector_node] Detected 1 wall(s). Strongest: direction=-115.7 deg, distance=0.41 m, length=1.80 m, points=26, rms=0.012 m[0m
+[0m[INFO] [2613.319901600]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2613.827602240]: [wall_detector_node] Detected 1 wall(s). Strongest: direction=-110.1 deg, distance=0.38 m, length=1.29 m, points=28, rms=0.009 m[0m
+[0m[INFO] [2614.489639072]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2615.332851520]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=-103.5 deg, distance=0.37 m, length=1.45 m, points=23, rms=0.008 m[0m
+[0m[INFO] [2615.830873152]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2616.489645888]: [wall_detector_node] Detected 1 wall(s). Strongest: direction=-99.9 deg, distance=0.36 m, length=1.99 m, points=44, rms=0.006 m[0m
+[0m[INFO] [2617.492459520]: [wall_detector_node] Detected 1 wall(s). Strongest: direction=-57.2 deg, distance=2.60 m, length=0.87 m, points=27, rms=0.012 m[0m
+[0m[INFO] [2617.823228704]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2618.839191360]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=-65.9 deg, distance=2.37 m, length=1.40 m, points=26, rms=0.012 m[0m
+[0m[INFO] [2619.500281600]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2620.000849184]: [wall_detector_node] Detected 3 wall(s). Strongest: direction=-148.7 deg, distance=0.46 m, length=1.32 m, points=50, rms=0.007 m[0m
+[0m[INFO] [2621.002604192]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=-52.1 deg, distance=2.67 m, length=1.18 m, points=35, rms=0.013 m[0m
+[0m[INFO] [2621.492416640]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2622.144496256]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=-143.6 deg, distance=0.45 m, length=1.18 m, points=63, rms=0.008 m[0m
+[0m[INFO] [2623.294874688]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=153.1 deg, distance=1.00 m, length=2.00 m, points=31, rms=0.006 m[0m
+[0m[INFO] [2623.470764000]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2624.637276800]: [wall_detector_node] Detected 1 wall(s). Strongest: direction=-115.7 deg, distance=0.41 m, length=1.80 m, points=26, rms=0.012 m[0m
+[0m[INFO] [2625.296529696]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2625.801580224]: [wall_detector_node] Detected 1 wall(s). Strongest: direction=-110.1 deg, distance=0.38 m, length=1.29 m, points=28, rms=0.009 m[0m
+[0m[INFO] [2626.466777088]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2627.309427840]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=-103.5 deg, distance=0.37 m, length=1.45 m, points=23, rms=0.008 m[0m
+[0m[INFO] [2627.806918112]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2628.469076352]: [wall_detector_node] Detected 1 wall(s). Strongest: direction=-99.9 deg, distance=0.36 m, length=1.99 m, points=44, rms=0.006 m[0m
+[0m[INFO] [2629.471274528]: [wall_detector_node] Detected 1 wall(s). Strongest: direction=-57.2 deg, distance=2.60 m, length=0.87 m, points=27, rms=0.012 m[0m
+[0m[INFO] [2629.799758080]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2630.817383968]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=-65.9 deg, distance=2.37 m, length=1.40 m, points=26, rms=0.012 m[0m
+[0m[INFO] [2631.478396928]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2631.818131744]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=141.1 deg, distance=1.07 m, length=2.26 m, points=49, rms=0.008 m[0m
+[0m[INFO] [2632.980271232]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=-52.1 deg, distance=2.67 m, length=1.18 m, points=35, rms=0.013 m[0m
+[0m[INFO] [2633.470321088]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2634.124642080]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=-143.6 deg, distance=0.45 m, length=1.18 m, points=63, rms=0.008 m[0m
+[0m[INFO] [2635.274249152]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=153.1 deg, distance=1.00 m, length=2.00 m, points=31, rms=0.006 m[0m
+[0m[INFO] [2635.448277120]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2636.616815680]: [wall_detector_node] Detected 1 wall(s). Strongest: direction=-115.7 deg, distance=0.41 m, length=1.80 m, points=26, rms=0.012 m[0m
+[0m[INFO] [2637.275281472]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2637.781916192]: [wall_detector_node] Detected 1 wall(s). Strongest: direction=-110.1 deg, distance=0.38 m, length=1.29 m, points=28, rms=0.009 m[0m
+[0m[INFO] [2638.444908864]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2639.288742720]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=-103.5 deg, distance=0.37 m, length=1.45 m, points=23, rms=0.008 m[0m
+[0m[INFO] [2639.786460192]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2640.444065792]: [wall_detector_node] Detected 1 wall(s). Strongest: direction=-99.9 deg, distance=0.36 m, length=1.99 m, points=44, rms=0.006 m[0m
+[0m[INFO] [2641.446588800]: [wall_detector_node] Detected 1 wall(s). Strongest: direction=-57.2 deg, distance=2.60 m, length=0.87 m, points=27, rms=0.012 m[0m
+[0m[INFO] [2641.775783424]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2642.794416096]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=-65.9 deg, distance=2.37 m, length=1.40 m, points=26, rms=0.012 m[0m
+[0m[INFO] [2643.455476416]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2643.956237536]: [wall_detector_node] Detected 3 wall(s). Strongest: direction=-148.7 deg, distance=0.46 m, length=1.32 m, points=50, rms=0.007 m[0m
+[0m[INFO] [2644.957723264]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=-52.1 deg, distance=2.67 m, length=1.18 m, points=35, rms=0.013 m[0m
+[0m[INFO] [2645.447285472]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2646.103128256]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=-143.6 deg, distance=0.45 m, length=1.18 m, points=63, rms=0.008 m[0m
+[0m[INFO] [2647.250856640]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=153.1 deg, distance=1.00 m, length=2.00 m, points=31, rms=0.006 m[0m
+[0m[INFO] [2647.424638880]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2648.592728672]: [wall_detector_node] Detected 1 wall(s). Strongest: direction=-115.7 deg, distance=0.41 m, length=1.80 m, points=26, rms=0.012 m[0m
+[0m[INFO] [2649.251846944]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2649.755677568]: [wall_detector_node] Detected 1 wall(s). Strongest: direction=-110.1 deg, distance=0.38 m, length=1.29 m, points=28, rms=0.009 m[0m
+[0m[INFO] [2650.421014048]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2651.266421216]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=-103.5 deg, distance=0.37 m, length=1.45 m, points=23, rms=0.008 m[0m
+[0m[INFO] [2651.760876352]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2652.423412800]: [wall_detector_node] Detected 1 wall(s). Strongest: direction=-99.9 deg, distance=0.36 m, length=1.99 m, points=44, rms=0.006 m[0m
+[0m[INFO] [2653.424896704]: [wall_detector_node] Detected 1 wall(s). Strongest: direction=-57.2 deg, distance=2.60 m, length=0.87 m, points=27, rms=0.012 m[0m
+[0m[INFO] [2653.752133472]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2654.769584992]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=-65.9 deg, distance=2.37 m, length=1.40 m, points=26, rms=0.012 m[0m
+[0m[INFO] [2655.431581248]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2655.930934112]: [wall_detector_node] Detected 3 wall(s). Strongest: direction=-148.7 deg, distance=0.46 m, length=1.32 m, points=50, rms=0.007 m[0m
+[0m[INFO] [2656.932726688]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=-52.1 deg, distance=2.67 m, length=1.18 m, points=35, rms=0.013 m[0m
+[0m[INFO] [2657.422906176]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2658.075394944]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=-143.6 deg, distance=0.45 m, length=1.18 m, points=63, rms=0.008 m[0m
+[0m[INFO] [2659.226685600]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=153.1 deg, distance=1.00 m, length=2.00 m, points=31, rms=0.006 m[0m
+[0m[INFO] [2659.400827424]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2660.569137280]: [wall_detector_node] Detected 1 wall(s). Strongest: direction=-115.7 deg, distance=0.41 m, length=1.80 m, points=26, rms=0.012 m[0m
+[0m[INFO] [2661.227012192]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2661.733058272]: [wall_detector_node] Detected 1 wall(s). Strongest: direction=-110.1 deg, distance=0.38 m, length=1.29 m, points=28, rms=0.009 m[0m
+[0m[INFO] [2662.396406080]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2663.239740128]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=-103.5 deg, distance=0.37 m, length=1.45 m, points=23, rms=0.008 m[0m
+[0m[INFO] [2663.738176928]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2664.398975808]: [wall_detector_node] Detected 1 wall(s). Strongest: direction=-99.9 deg, distance=0.36 m, length=1.99 m, points=44, rms=0.006 m[0m
+[0m[INFO] [2665.400768160]: [wall_detector_node] Detected 1 wall(s). Strongest: direction=-57.2 deg, distance=2.60 m, length=0.87 m, points=27, rms=0.012 m[0m
+[0m[INFO] [2665.728148928]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2666.746707584]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=-65.9 deg, distance=2.37 m, length=1.40 m, points=26, rms=0.012 m[0m
+[0m[INFO] [2667.407573568]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2667.908753632]: [wall_detector_node] Detected 3 wall(s). Strongest: direction=-148.7 deg, distance=0.46 m, length=1.32 m, points=50, rms=0.007 m[0m
+[0m[INFO] [2668.909607136]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=-52.1 deg, distance=2.67 m, length=1.18 m, points=35, rms=0.013 m[0m
+[0m[INFO] [2669.399218432]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2670.050825792]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=-143.6 deg, distance=0.45 m, length=1.18 m, points=63, rms=0.008 m[0m
+[0m[INFO] [2671.201784288]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=153.1 deg, distance=1.00 m, length=2.00 m, points=31, rms=0.006 m[0m
+[0m[INFO] [2671.376624320]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2672.544558112]: [wall_detector_node] Detected 1 wall(s). Strongest: direction=-115.7 deg, distance=0.41 m, length=1.80 m, points=26, rms=0.012 m[0m
+[0m[INFO] [2673.203955616]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2673.708208384]: [wall_detector_node] Detected 1 wall(s). Strongest: direction=-110.1 deg, distance=0.38 m, length=1.29 m, points=28, rms=0.009 m[0m
+[0m[INFO] [2674.373304480]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2675.215744480]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=-103.5 deg, distance=0.37 m, length=1.45 m, points=23, rms=0.008 m[0m
+[0m[INFO] [2675.713815232]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2676.372602912]: [wall_detector_node] Detected 1 wall(s). Strongest: direction=-99.9 deg, distance=0.36 m, length=1.99 m, points=44, rms=0.006 m[0m
+[0m[INFO] [2677.375489376]: [wall_detector_node] Detected 1 wall(s). Strongest: direction=-57.2 deg, distance=2.60 m, length=0.87 m, points=27, rms=0.012 m[0m
+[0m[INFO] [2677.704966752]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2678.722280128]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=-65.9 deg, distance=2.37 m, length=1.40 m, points=26, rms=0.012 m[0m
+[0m[INFO] [2679.383442976]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2679.883481792]: [wall_detector_node] Detected 3 wall(s). Strongest: direction=-148.7 deg, distance=0.46 m, length=1.32 m, points=50, rms=0.007 m[0m
+[0m[INFO] [2680.885621120]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=-52.1 deg, distance=2.67 m, length=1.18 m, points=35, rms=0.013 m[0m
+[0m[INFO] [2681.375702464]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2682.027620256]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=-143.6 deg, distance=0.45 m, length=1.18 m, points=63, rms=0.008 m[0m
+[0m[INFO] [2683.177944512]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=153.1 deg, distance=1.00 m, length=2.00 m, points=31, rms=0.006 m[0m
+[0m[INFO] [2683.352762720]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2684.520848704]: [wall_detector_node] Detected 1 wall(s). Strongest: direction=-115.7 deg, distance=0.41 m, length=1.80 m, points=26, rms=0.012 m[0m
+[0m[INFO] [2685.179582400]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2685.684527040]: [wall_detector_node] Detected 1 wall(s). Strongest: direction=-110.1 deg, distance=0.38 m, length=1.29 m, points=28, rms=0.009 m[0m
+[0m[INFO] [2686.349359648]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2687.192887168]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=-103.5 deg, distance=0.37 m, length=1.45 m, points=23, rms=0.008 m[0m
+[0m[INFO] [2687.689938816]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2688.349419264]: [wall_detector_node] Detected 1 wall(s). Strongest: direction=-99.9 deg, distance=0.36 m, length=1.99 m, points=44, rms=0.006 m[0m
+[0m[INFO] [2689.352195520]: [wall_detector_node] Detected 1 wall(s). Strongest: direction=-57.2 deg, distance=2.60 m, length=0.87 m, points=27, rms=0.012 m[0m
+[0m[INFO] [2689.681158464]: [wall_detector_node] No wall detected.[0m
+[0m[INFO] [2690.698862336]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=-65.9 deg, distance=2.37 m, length=1.40 m, points=26, rms=0.012 m[0m
+[0m[INFO] [2691.359639744]: [wall_detector_node] No wall detected.[0m

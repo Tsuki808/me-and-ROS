@@ -1,0 +1,44 @@
+robot_description_kinematics:
+  arm:
+    kinematics_solver: kdl_kinematics_plugin/KDLKinematicsPlugin
+    kinematics_solver_search_resolution: 0.005
+    kinematics_solver_timeout: 0.1
+    position_only_ik: true
+robot_description_planning:
+  joint_limits:
+    joint1: {has_velocity_limits: true, max_velocity: 0.6, has_acceleration_limits: true, max_acceleration: 0.5}
+    joint2: {has_velocity_limits: true, max_velocity: 0.6, has_acceleration_limits: true, max_acceleration: 0.5}
+    joint3: {has_velocity_limits: true, max_velocity: 0.6, has_acceleration_limits: true, max_acceleration: 0.5}
+    joint4: {has_velocity_limits: true, max_velocity: 0.6, has_acceleration_limits: true, max_acceleration: 0.5}
+move_group:
+  planning_plugin: ompl_interface/OMPLPlanner
+  request_adapters: >-
+    default_planner_request_adapters/AddTimeParameterization
+    default_planner_request_adapters/FixWorkspaceBounds
+    default_planner_request_adapters/FixStartStateBounds
+    default_planner_request_adapters/FixStartStateCollision
+    default_planner_request_adapters/FixStartStatePathConstraints
+  start_state_max_bounds_error: 0.05
+  planner_configs:
+    RRTConnect: {type: 'geometric::RRTConnect', range: 0.0}
+  arm:
+    planner_configs: [RRTConnect]
+    projection_evaluator: joints(joint1,joint2)
+    longest_valid_segment_fraction: 0.01
+  moveit_controller_manager: moveit_simple_controller_manager/MoveItSimpleControllerManager
+  moveit_manage_controllers: false
+  controller_list:
+    - name: /om_with_tb3/arm_controller
+      action_ns: follow_joint_trajectory
+      type: FollowJointTrajectory
+      default: true
+      joints: [joint1, joint2, joint3, joint4]
+  trajectory_execution:
+    allowed_execution_duration_scaling: 2.0
+    allowed_goal_duration_margin: 3.0
+    allowed_start_tolerance: 0.05
+  planning_scene_monitor:
+    publish_planning_scene: true
+    publish_geometry_updates: true
+    publish_state_updates: true
+    publish_transforms_updates: true

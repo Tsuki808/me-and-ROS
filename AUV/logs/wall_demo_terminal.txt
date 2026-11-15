@@ -1,0 +1,25 @@
+AUV 雷达墙检测演示（真实水下 bag 回放，只读）
+==================================================
+节点  : auv_lidar_perception/wall_detector_node  (C++ RANSAC)
+输入  : /scan_replay <- /scan（回放时间戳规范化）
+bag   : field/19700101T000105Z_217c3dec/sensors.bag
+窗口  : 相对 850-862 s，循环回放
+参数  : 24 点 / 1.2 m / RMS 0.04 m / 0-5 m
+--------------------------------------------------
+实测 /scan_replay : average rate 6.11 Hz
+最佳可视化帧     : 3 面墙（见 02_lidar_wall_detection.mp4）
+--------------------------------------------------
+[INFO] [2679.883481792]: [wall_detector_node] Detected 3 wall(s). Strongest: direction=-148.7 deg, distance=0.46 m, length=1.32 m, points=50, rms=0.007 m
+[INFO] [2680.885621120]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=-52.1 deg, distance=2.67 m, length=1.18 m, points=35, rms=0.013 m
+[INFO] [2682.027620256]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=-143.6 deg, distance=0.45 m, length=1.18 m, points=63, rms=0.008 m
+[INFO] [2683.177944512]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=153.1 deg, distance=1.00 m, length=2.00 m, points=31, rms=0.006 m
+[INFO] [2684.520848704]: [wall_detector_node] Detected 1 wall(s). Strongest: direction=-115.7 deg, distance=0.41 m, length=1.80 m, points=26, rms=0.012 m
+[INFO] [2685.684527040]: [wall_detector_node] Detected 1 wall(s). Strongest: direction=-110.1 deg, distance=0.38 m, length=1.29 m, points=28, rms=0.009 m
+[INFO] [2687.192887168]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=-103.5 deg, distance=0.37 m, length=1.45 m, points=23, rms=0.008 m
+[INFO] [2688.349419264]: [wall_detector_node] Detected 1 wall(s). Strongest: direction=-99.9 deg, distance=0.36 m, length=1.99 m, points=44, rms=0.006 m
+[INFO] [2689.352195520]: [wall_detector_node] Detected 1 wall(s). Strongest: direction=-57.2 deg, distance=2.60 m, length=0.87 m, points=27, rms=0.012 m
+[INFO] [2690.698862336]: [wall_detector_node] Detected 2 wall(s). Strongest: direction=-65.9 deg, distance=2.37 m, length=1.40 m, points=26, rms=0.012 m
+--------------------------------------------------
+说明：RViz 1.14 在当前 VNC 下对 1970 时间戳 bag 的
+LaserScan 显示报错；本演示改用等价顶视图渲染，
+数据仍来自当前 wall_detector_node 的实时输出。

@@ -1,0 +1,40 @@
+{
+  "stamp": 919.527759456,
+  "scan_stamp": 919.527759456,
+  "frame": "laser_frame",
+  "walls": [
+    {
+      "index": 1,
+      "direction_deg": -148.7,
+      "distance_m": 0.459,
+      "orientation_deg": -58.7,
+      "visible_length_m": 1.324,
+      "inlier_count": 50,
+      "rms_error_m": 0.0073,
+      "nearest_x": -0.392,
+      "nearest_y": -0.239
+    },
+    {
+      "index": 2,
+      "direction_deg": 141.6,
+      "distance_m": 1.054,
+      "orientation_deg": -128.4,
+      "visible_length_m": 2.141,
+      "inlier_count": 41,
+      "rms_error_m": 0.0079,
+      "nearest_x": -0.826,
+      "nearest_y": 0.655
+    },
+    {
+      "index": 3,
+      "direction_deg": -62.8,
+      "distance_m": 2.445,
+      "orientation_deg": 27.2,
+      "visible_length_m": 1.354,
+      "inlier_count": 29,
+      "rms_error_m": 0.013,
+      "nearest_x": 1.119,
+      "nearest_y": -2.174
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+
+AUV 球检测演示（真实水下蓝球片段，只读）
+==================================================
+节点  : auv_vision/object_detection_node.py (YOLOv8 251016)
+输入  : field/217c 141.5-147.0 s -> 1280x720@5fps
+阈值  : conf>=0.35（演示）；target=blue_ball
+--------------------------------------------------
+真实检测（节选，count/trim 来自 BallTrack）:
+t=2906.461  raw=[blue_ball 0.79 x=0.883 w=0.129 h=0.360]
+t=2907.862  raw=[blue_ball 0.38 x=0.684 w=0.127 h=0.299]
+t=2908.066  raw=[blue_ball 0.58 x=0.647 w=0.127 h=0.375]
+t=2908.466  raw=[blue_ball 0.43 x=0.554 w=0.124 h=0.372]
+--------------------------------------------------
+BallTrack: count=0  ball_x=-  trim=0
+门控条件: 0.5 < w/h_norm < 2.0
+真实框: w=0.129, h=0.360 -> w/h=0.358 < 0.5 -> 拒绝
+--------------------------------------------------
+受控对照（非真实视频，仅验证门控逻辑）:
+  frame 1: count=1  ball_x=None
+  frame 2: count=2  ball_x=None
+  frame 3: count=3  ball_x=0.7
+  accepted ball_x=0.700 -> vision error=+0.200 -> trim=+100
+  16:9真实框 frame 1: count=0  ball_x=None (w/h=0.358)
+  16:9真实框 frame 2: count=0  ball_x=None (w/h=0.358)
+  16:9真实框 frame 3: count=0  ball_x=None (w/h=0.358)
+结论: 门控逻辑正常；真实框的归一化 w/h=0.36 < 0.5 被拒绝。

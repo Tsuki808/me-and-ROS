@@ -1,0 +1,10 @@
+string color
+string observation_id
+string candidate_id
+---
+bool success
+string message
+float64 elapsed_seconds
+---
+string stage
+string detail

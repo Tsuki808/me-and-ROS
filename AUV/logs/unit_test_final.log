@@ -1,0 +1,40 @@
+test_pressure_auto_zero_and_frozen_underwater (test_final.HeadingAndPressureTests) ... ok
+test_pressure_repeated_samples_do_not_initialize (test_final.HeadingAndPressureTests) ... ok
+test_shore_fallback_and_unstable_pressure (test_final.HeadingAndPressureTests) ... ok
+test_signed_minus_one_crossing_both_sides (test_final.HeadingAndPressureTests) ... ok
+test_wrap_is_not_false_arrival (test_final.HeadingAndPressureTests) ... ok
+test_ambiguous_empty_and_low_confidence_clear_ball (test_final.PerceptionTests) ... ok
+test_ball_requires_distinct_consistent_correct_frames_and_expires (test_final.PerceptionTests) ... ok
+test_default_rear_facing_lidar_swaps_front_rear_and_left_right_once (test_final.PerceptionTests) ... ok
+test_rear_mount_and_compass_rotation_keep_original_wall_identity (test_final.PerceptionTests) ... ok
+test_unknown_tf_and_near_circle_do_not_become_walls (test_final.PerceptionTests) ... ok
+test_wall_confirmation_distance_and_expiration (test_final.PerceptionTests) ... ok
+test_boot_waits_for_continuous_depth_and_ack (test_final.PolicyTests) ... ok
+test_depth_boundaries_override_translation (test_final.PolicyTests) ... ok
+test_full_timed_route_and_no_fake_success (test_final.PolicyTests) ... ok
+test_invalid_configuration_rejected (test_final.PolicyTests) ... ok
+test_left_target_accepts_exact_near_boundary_but_not_inside (test_final.PolicyTests) ... ok
+test_missing_ball_depth_records_without_arming (test_final.PolicyTests) ... ok
+test_mode_loss_aborts (test_final.PolicyTests) ... ok
+test_near_wall_not_merely_visible_wall_ends_return (test_final.PolicyTests) ... ok
+test_no_heading_recapture_on_drift_and_time_not_extended (test_final.PolicyTests) ... ok
+test_pressure_target_includes_ten_cm (test_final.PolicyTests) ... ok
+test_sensor_failures_abort_and_never_resume (test_final.PolicyTests) ... ok
+test_vision_cannot_push_outside_wall_corridor (test_final.PolicyTests) ... ok
+test_vision_horizontal_only_and_budget (test_final.PolicyTests) ... ok
+test_wall_correction_and_missing_wall_fallback (test_final.PolicyTests) ... ok
+test_gap_between_valid_samples_clears_window (test_final.SurfaceTests) ... ok
+test_near_left_wall_also_starts_surface_recovery (test_final.SurfaceTests) ... ok
+test_pressure_jitter_and_submergence_restart_three_seconds (test_final.SurfaceTests) ... ok
+test_repeated_stamp_does_not_count_and_stale_clears_window (test_final.SurfaceTests) ... ok
+test_stable_deep_pressure_never_counts (test_final.SurfaceTests) ... ok
+test_stable_shallow_distinct_samples_take_three_seconds (test_final.SurfaceTests) ... ok
+test_surface_bypasses_task_depth_and_heading_but_not_feedback (test_final.SurfaceTests) ... ok
+test_surface_timeout_never_claims_success_or_keeps_rising (test_final.SurfaceTests) ... ok
+test_final_combined_525_depth_and_yaw_survive_gate_and_controller (test_final.TransportTests) ... ok
+test_only_final_writer_and_neutral_latch (test_final.TransportTests) ... ok
+
+----------------------------------------------------------------------
+Ran 35 tests in 0.985s
+
+OK

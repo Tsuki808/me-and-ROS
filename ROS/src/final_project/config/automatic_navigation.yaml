@@ -1,0 +1,16 @@
+# Strict delivery tolerances restored from the existing navigation configuration.
+# Used only after mode-2 mapping; modes 1/3 retain navigation.yaml.
+make_plan_clear_costmap: false
+global_costmap:
+  track_unknown_space: true
+  static:
+    first_map_only: true
+    track_unknown_space: true
+NavfnROS:
+  allow_unknown: false
+  default_tolerance: 0.0
+DWAPlannerROS:
+  # Match mapping navigation; docking retreat uses its own velocity source.
+  min_vel_x: 0.0
+  xy_goal_tolerance: 0.045
+  yaw_goal_tolerance: 0.05

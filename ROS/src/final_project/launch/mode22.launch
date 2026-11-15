@@ -1,0 +1,14 @@
+<launch>
+  <arg name="target_color" default="red"/>
+  <arg name="yolo_view" default="true"/>
+  <arg name="gui" default="true"/>
+  <arg name="rviz" default="true"/>
+  <include file="$(find final_project)/launch/simulation.launch">
+    <arg name="mode" value="2"/>
+    <arg name="mode2_variant" value="semantic_pick"/>
+    <arg name="target_color" value="$(arg target_color)"/>
+    <arg name="yolo_view" value="$(arg yolo_view)"/>
+    <arg name="gui" value="$(arg gui)"/>
+    <arg name="rviz" value="$(arg rviz)"/>
+  </include>
+</launch>
