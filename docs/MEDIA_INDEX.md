@@ -140,7 +140,7 @@ GitHub 的 README 会**剥离 `<video>` 标签**（连 `autoplay`、`loop` 一�
 | `preview_m21_pick.gif` | 模式2.1_A台抓取.mp4 | 118–165 s | 5× + 12 fps | 0.92 MB |
 | `preview_m21_place.gif` | 模式2.1_B台放置.mp4 | 262–310 s | 5× + 12 fps | 0.71 MB |
 | `preview_m22_semantic.gif` | 模式2.2_动作录像.mp4 | 52–78 s | 3× + 12 fps | 0.62 MB |
-| `preview_auv.gif` | `AUV/2929ebdf...raw.mp4`（2560×1080，竖屏 1072×2560） | 34–46 s | 2× + 8 fps + 方形裁切 1080×1080 + 轻微降噪 | 3.19 MB |
+| `preview_auv.gif` | `AUV/2929ebdf...raw.mp4`（2560×1080，竖屏 1072×2560） | 34–45.5 s | 1.9× + 7 fps + 方形裁切 1080×1080 + 轻微降噪 | 2.56 MB |
 
 生成方式（两步调色板，避免 GIF 抖动）：
 
