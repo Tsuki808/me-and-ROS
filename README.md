@@ -16,13 +16,43 @@
 ![VLM](https://img.shields.io/badge/Qwen3--VL-4B-6A5ACD?style=flat-square)
 ![AUV](https://img.shields.io/badge/AUV-RoboCup%202026-0B7285?style=flat-square)
 
-<br>
-
-<img src="docs/media/mode2_1/24_workspace_overview.png" width="860" alt="模式2.1 运行现场">
-
-<sub>模式 2.1 运行现场：Gazebo 世界、RViz 地图与多传感器、YOLO 观察窗口、终端状态同屏</sub>
-
 </div>
+
+---
+
+## 现场演示
+
+<table>
+<tr>
+<td width="50%" align="center">
+<img src="docs/media/preview/preview_m21_mapping.gif" width="100%" alt="模式2.1 自动建图">
+<br><sub><b>模式 2.1 · 自动建图</b><br>GMapping + frontier 探索，地图从空白长到闭合</sub>
+</td>
+<td width="50%" align="center">
+<img src="docs/media/preview/preview_m21_pick.gif" width="100%" alt="模式2.1 A台抓取">
+<br><sub><b>模式 2.1 · A 台抓取</b><br>视觉对位 → 夹爪闭合 → 离台抬升</sub>
+</td>
+</tr>
+<tr>
+<td width="50%" align="center">
+<img src="docs/media/preview/preview_m21_place.gif" width="100%" alt="模式2.1 B台放置">
+<br><sub><b>模式 2.1 · B 台放置</b><br>对位 → 下降 → 释放 → 退离</sub>
+</td>
+<td width="50%" align="center">
+<img src="docs/media/preview/preview_m22_semantic.gif" width="100%" alt="模式2.2 语义取物">
+<br><sub><b>模式 2.2 · 语义取物</b><br>Qwen3-VL 选中 obj_1 → 抓取 → 举示 → 放回</sub>
+</td>
+</tr>
+</table>
+
+<p align="center">
+<a href="AUV/videos/05_pool_launch_and_dive.mp4"><img src="docs/media/preview/preview_auv.gif" width="340" alt="AUV 入水与下潜"></a>
+<br><sub><b>AUV · 入水与下潜</b>　RoboCup 水下机器人赛项现场（点击看 35 s 完整片段）</sub>
+</p>
+
+<p align="center"><sub>以上为首屏自动循环片段（2–5× 加速、静音、GIF，无需点击）；完整版 MP4 见
+<a href="#二模式21全自动建图与自主取送">模式 2.1</a> 与
+<a href="#三模式22视觉语言模型驱动的语义取物与可解释技能执行">模式 2.2</a> 章节。</sub></p>
 
 ---
 
@@ -30,6 +60,7 @@
 
 | 章节 | 内容 | 关键产出 |
 | :--- | :--- | :--- |
+| [现场演示](#现场演示) | 首屏自动循环片段 | 5 段 GIF（建图 / 抓取 / 放置 / 语义 / AUV） |
 | [一](#一项目概览) | 项目概览与环境 | 四个入口、一套底层 |
 | [二](#二模式21全自动建图与自主取送) | **模式 2.1：全自动建图与自主取送** | 382.9 s 自主探索、A→B 抓放、返航 |
 | [三](#三模式22视觉语言模型驱动的语义取物与可解释技能执行) | **模式 2.2：VLM 语义取物与可解释技能执行** | Qwen3-VL 受限决策 + ROS 六项校验 |
@@ -37,7 +68,7 @@
 | [五](#五auv-进阶实践成果佐证) | AUV 进阶实践（仅成果佐证） | RoboCup 水下机器人赛项 |
 | [六](#六复现与验证) | 复现步骤与验证记录 | `VALIDATION.md`、`RUNBOOK.md` |
 | [七](#七仓库说明) | 收录范围、许可与致谢 | 源码边界声明 |
-| [媒体索引](docs/MEDIA_INDEX.md) | 截图与视频的原始文件名对照、视频处理参数 | 85 张截图 · 4 段视频 |
+| [媒体索引](docs/MEDIA_INDEX.md) | 截图与视频的原始文件名对照、视频处理参数 | 85 张截图 · 5 段 GIF · 4 段视频 |
 
 ---
 
@@ -179,6 +210,14 @@ AMCL 不是从零全局定位，而是用保存时的机器人位姿初始化粒
 </div>
 
 ### 现场记录
+
+**运行总览**
+
+<div align="center">
+<img src="docs/media/mode2_1/24_workspace_overview.png" width="820" alt="模式2.1 运行现场">
+</div>
+
+<p align="center"><sub>Gazebo 世界、RViz 地图与多传感器、YOLO 观察窗口、终端状态同屏</sub></p>
 
 **建图：从空白到闭合**
 
@@ -524,12 +563,13 @@ flowchart LR
 | :--- | :--- | :--- |
 | `AUV/figures/` | 架构图、任务时间线、航向中止、雷达三面墙拟合、球门控诊断 | 5 张 |
 | `AUV/screenshots/` | 环境、工程结构、单元测试、状态机、墙检测、球检测、赛场 | 13 张 |
-| `AUV/videos/` | 状态机终端演示、雷达墙检测动画、蓝球检测标注、比赛水下片段 | 4 段 |
+| `AUV/videos/` | 入水与下潜、状态机终端演示、雷达墙检测动画、蓝球检测标注、比赛水下片段 | 5 段 |
 | `AUV/logs/` | 单元测试、状态机、真实会话摘要、墙/球检测、环境核验 | 25 份 |
 | `AUV/data/` | 会话 CSV、雷达 JSONL、检测 CSV、演示参数副本 | 7 份 |
 | `AUV/AUV_Project_Summary.md` | 完整文字版：算法、实验、图表索引、复现路径 | 1 篇 |
 
 <p align="center">
+<a href="AUV/videos/05_pool_launch_and_dive.mp4">▶ 入水与下潜（35 s）</a> ·
 <a href="AUV/videos/04_competition_pool.mp4">▶ 比赛水下片段</a> ·
 <a href="AUV/videos/02_lidar_wall_detection.mp4">▶ 雷达墙检测</a> ·
 <a href="AUV/videos/03_ball_detection_annotated.mp4">▶ 蓝球检测标注</a> ·

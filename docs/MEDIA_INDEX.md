@@ -116,7 +116,31 @@ README 中的图片与视频统一使用 ASCII 文件名，便于 URL 稳定与�
 | `mode2_1_place.mp4` | 模式2.1_B台放置.mp4（323 s） | 取 200–323 s，2× | 61.5 s / 0.9 MB |
 | `mode2_1_mapping.mp4` | 模式2.1_建图延时.mp4（14 s） | 全片 2× | 7 s / 0.3 MB |
 | `mode2_2_semantic_pick.mp4` | 模式2.2_动作录像.mp4（131 s） | 全片 2× | 65.7 s / 0.8 MB |
+| `AUV/videos/05_pool_launch_and_dive.mp4` | `AUV/2929ebdf...raw.mp4`（74 s，2560×1080） | 取 8–64 s，1.6×，720×1706 | 35 s / 6.6 MB |
 
 每段视频同名 `*_poster.jpg` 为封面帧，README 中作为可点击缩略图使用。
 
 > 完整原始录像（`原始证据/` 下的`.avi`，单文件最大 203 MB）未入库：GitHub 单文件上限 100 MB，且与已上传的加速版内容重复。
+
+## 五、首屏预览 GIF（`docs/media/preview/`）
+
+GitHub 的 README 不支持内嵌 `<video>` 播放仓库内的 MP4，因此首屏采用**自动循环 GIF**，保证"打开页面即可看到动作"；完整版仍以 MP4 链接提供。
+
+| 现文件名 | 来源视频 | 截取窗口 | 处理 | 输出 |
+| :--- | :--- | :--- | :--- | :--- |
+| `preview_m21_mapping.gif` | 模式2.1_建图延时.mp4 | 全片 14 s | 2× + 3 fps | 0.53 MB |
+| `preview_m21_pick.gif` | 模式2.1_A台抓取.mp4 | 120–165 s | 5× + 8 fps | 0.81 MB |
+| `preview_m21_place.gif` | 模式2.1_B台放置.mp4 | 262–310 s | 5× + 8 fps | 0.66 MB |
+| `preview_m22_semantic.gif` | 模式2.2_动作录像.mp4 | 52–78 s | 3× + 8 fps | 0.61 MB |
+| `preview_auv.gif` | `AUV/2929ebdf...raw.mp4`（2560×1080，竖屏 1072×2560） | 34–47 s | 2× + 7 fps + 方形裁切 1080×1080 | 2.96 MB |
+
+生成方式（两步调色板，避免 GIF 抖动）：
+
+```bash
+ffmpeg -ss <start> -t <dur> -i <in.mp4> -vf "setpts=PTS/<n>,fps=<f>,scale=<w>:-1:flags=lanczos,palettegen=stats_mode=diff:max_colors=200" pal.png
+ffmpeg -ss <start> -t <dur> -i <in.mp4> -i pal.png \
+  -lavfi "setpts=PTS/<n>,fps=<f>,scale=<w>:-1:flags=lanczos[x];[x][1:v]paletteuse=dither=bayer:bayer_scale=4:diff_mode=rectangle" \
+  -loop 0 out.gif
+```
+
+AUV 原始素材为竖屏手机录制（旋转后 1072×2560），裁切为以 AUV 为中心的 1080×1080 方形，避免在 README 中出现超长竖图。
