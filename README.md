@@ -22,6 +22,8 @@
 
 ## 现场演示
 
+<sub>以下动图**加载后自动循环播放，无需点击**；均取自真实运行录像，已做 2–5× 加速与体积压缩。</sub>
+
 <table>
 <tr>
 <td width="50%" align="center">
@@ -46,13 +48,14 @@
 </table>
 
 <p align="center">
-<a href="AUV/videos/05_pool_launch_and_dive.mp4"><img src="docs/media/preview/preview_auv.gif" width="340" alt="AUV 入水与下潜"></a>
-<br><sub><b>AUV · 入水与下潜</b>　RoboCup 水下机器人赛项现场（点击看 35 s 完整片段）</sub>
+<img src="docs/media/preview/preview_auv.gif" width="340" alt="AUV 入水与下潜">
+<br><sub><b>AUV · 入水与下潜</b>　RoboCup 水下机器人赛项现场</sub>
 </p>
 
-<p align="center"><sub>以上为首屏自动循环片段（2–5× 加速、静音、GIF，无需点击）；完整版 MP4 见
-<a href="#二模式21全自动建图与自主取送">模式 2.1</a> 与
-<a href="#三模式22视觉语言模型驱动的语义取物与可解释技能执行">模式 2.2</a> 章节。</sub></p>
+<p align="center"><sub>完整版 MP4（2–5× 加速）见
+<a href="#二模式21全自动建图与自主取送">模式 2.1</a>、
+<a href="#三模式22视觉语言模型驱动的语义取物与可解释技能执行">模式 2.2</a> 与
+<a href="#五auv-进阶实践成果佐证">AUV</a> 章节；本区只负责"打开即可看到动作"。</sub></p>
 
 ---
 
@@ -254,7 +257,7 @@ AMCL 不是从零全局定位，而是用保存时的机器人位姿初始化粒
 
 ### 演示视频
 
-上传前统一做 **2× 加速 + 核心片段截取**，并用 H.264（CRF 28）重编码，单段控制在 1 MB 量级。点击封面播放。
+上传前统一做 **2× 加速 + 核心片段截取**，并用 H.264（CRF 28）重编码，单段控制在 1 MB 量级。首屏动图是这些 MP4 的压缩预览；需要看完整片段时点封面——GitHub 的 README 会剥离 `<video>` 标签，仓库内的 MP4 无法内嵌播放，只能以链接形式打开。
 
 <table>
 <tr>

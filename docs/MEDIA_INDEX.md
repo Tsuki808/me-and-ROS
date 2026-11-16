@@ -124,15 +124,23 @@ README 中的图片与视频统一使用 ASCII 文件名，便于 URL 稳定与�
 
 ## 五、首屏预览 GIF（`docs/media/preview/`）
 
-GitHub 的 README 不支持内嵌 `<video>` 播放仓库内的 MP4，因此首屏采用**自动循环 GIF**，保证"打开页面即可看到动作"；完整版仍以 MP4 链接提供。
+GitHub 的 README 会**剥离 `<video>` 标签**（连 `autoplay`、`loop` 一起丢弃），仓库内的 MP4 用图片语法引用也只会变成一个裂图；唯一能"打开页面就自动循环、不需要点击"的形式是**动图**。因此首屏用 GIF 承载动作预览，完整版仍以 MP4 链接提供。
+
+三种写法的实测结果（GitHub Markdown 渲染接口）：
+
+| 写法 | 渲染结果 |
+| :--- | :--- |
+| `<video src="x.mp4" autoplay muted loop>` | 标签被整体移除，只剩空段落 |
+| `![demo](x.mp4)` | 变成 `<img src="x.mp4">`，浏览器显示裂图 |
+| `<img src="x.gif">` | 保留并标注 `data-animated-image`，浏览器原生自动循环 |
 
 | 现文件名 | 来源视频 | 截取窗口 | 处理 | 输出 |
 | :--- | :--- | :--- | :--- | :--- |
-| `preview_m21_mapping.gif` | 模式2.1_建图延时.mp4 | 全片 14 s | 2× + 3 fps | 0.53 MB |
-| `preview_m21_pick.gif` | 模式2.1_A台抓取.mp4 | 120–165 s | 5× + 8 fps | 0.81 MB |
-| `preview_m21_place.gif` | 模式2.1_B台放置.mp4 | 262–310 s | 5× + 8 fps | 0.66 MB |
-| `preview_m22_semantic.gif` | 模式2.2_动作录像.mp4 | 52–78 s | 3× + 8 fps | 0.61 MB |
-| `preview_auv.gif` | `AUV/2929ebdf...raw.mp4`（2560×1080，竖屏 1072×2560） | 34–47 s | 2× + 7 fps + 方形裁切 1080×1080 | 2.96 MB |
+| `preview_m21_mapping.gif` | 模式2.1_建图延时.mp4 | 全片 14 s | 2× + 4 fps | 0.53 MB |
+| `preview_m21_pick.gif` | 模式2.1_A台抓取.mp4 | 118–165 s | 5× + 12 fps | 0.92 MB |
+| `preview_m21_place.gif` | 模式2.1_B台放置.mp4 | 262–310 s | 5× + 12 fps | 0.71 MB |
+| `preview_m22_semantic.gif` | 模式2.2_动作录像.mp4 | 52–78 s | 3× + 12 fps | 0.62 MB |
+| `preview_auv.gif` | `AUV/2929ebdf...raw.mp4`（2560×1080，竖屏 1072×2560） | 34–46 s | 2× + 8 fps + 方形裁切 1080×1080 + 轻微降噪 | 3.19 MB |
 
 生成方式（两步调色板，避免 GIF 抖动）：
 
