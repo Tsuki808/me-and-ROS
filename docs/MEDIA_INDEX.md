@@ -32,7 +32,7 @@ README 中的图片与视频统一使用 ASCII 文件名，便于 URL 稳定与�
 | `20_place_sheet.jpg` | 20_B台动作联络表.png | 15 帧 B 台动作联络表 |
 | `21_grasp_envelope_fail.png` | 21_失败分析_35mm包络.png | 第一轮 35 mm 包络失败现场 |
 | `22_model_correction.png` | 22_修复日志_模型校正.png | 模型一致性校正日志 |
-| `23_final_map.png` | 23_最终地图.png | 352×672、0.025 m 栅格地图 |
+| `23_final_map.png` | 23_最终地图.png | 341×266、0.025 m 栅格地图（已裁去上方空白） |
 | `24_workspace_overview.png` | 24_工作台总览.png | Gazebo + RViz + YOLO + 终端同屏 |
 | `25_selected_frame.jpg` | 25_A台选盒原始帧.jpg | 未叠加检测框的原始选盒帧 |
 | `26_fullscreen_sheet.jpg` | 26_用户补充全屏现场_8帧.png | 8 帧 VMware 全屏现场联络表 |
